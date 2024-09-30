@@ -22,4 +22,4 @@ jobs:
         pip install -r requirements.txt
     
     - name: Deploy to Streamlit Cloud
-      run: streamlit run app.py
+      run: streamlit run question_answering.py
