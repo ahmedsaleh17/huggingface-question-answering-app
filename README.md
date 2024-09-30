@@ -1,3 +1,2 @@
 # huggingface-question-answering-app
-![image](https://github.com/user-attachments/assets/5319b2e6-b824-45f5-b206-c8259c5cdb14)
-
+![image](https://github.com/user-attachments/assets/55fb2fb2-277b-4a65-b558-5fcb6d797d36)
