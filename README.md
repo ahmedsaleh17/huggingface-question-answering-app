@@ -29,9 +29,6 @@ This project is a **Question Answering (QA) application** that leverages Hugging
 3. [Usage](#usage)
 4. [How it Works](#how-it-works)
 5. [Deployment](#deployment)
-6. [Contributing](#contributing)
-7. [License](#license)
-
 ---
 
 ## 🎥 **Demo**
