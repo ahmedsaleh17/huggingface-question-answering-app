@@ -24,11 +24,11 @@ This project is a **Question Answering (QA) application** that leverages Hugging
 ---
 
 ## 📑 **Table of Contents**
-1. [Demo](#demo)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [How it Works](#how-it-works)
-5. [Deployment](#deployment)
+1. [Demo](#-demo)
+2. [Installation](#️-installation)
+3. [Usage](#️-usage)
+4. [How it Works](#️-how-it-works)
+5. [Deployment](#️-deployment)
 ---
 
 ## 🎥 **Demo**
