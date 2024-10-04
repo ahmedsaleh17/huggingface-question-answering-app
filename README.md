@@ -51,7 +51,7 @@ Ensure you have the following installed:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/ahmedsaleh17/huggingface-question-answering-app
-   cd qa-streamlit-app
+   code huggingface-question-answering-app
    ```
 
 2. **Create a virtual environment** (optional but recommended):
