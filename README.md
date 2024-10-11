@@ -167,32 +167,40 @@ Ensure you have the following installed:
 
    Example GitHub Actions Workflow:
    ```yaml
-   name: Deploy Streamlit App
+  name: Deploy Streamlit App
 
-   on:
-     push:
-       branches:
-         - main
+  on:
+    push:
+      branches:
+        - main
 
-   jobs:
-     deploy:
-       runs-on: ubuntu-latest
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - name: Set up Python environment
+          uses: actions/setup-python@v4
+          with:
+            python-version: '3.10'
 
-       steps:
-       - name: Checkout code
-         uses: actions/checkout@v2
+        - name: Install dependencies
+          run: |
+            pip install -r requirements.txt
 
-       - name: Set up Python
-         uses: actions/setup-python@v2
-         with:
-           python-version: '3.10'
+        - name: Build Streamlit app
+          run: |
+            nohup streamlit run question_answering.py --server.port 8501 --server.headless True &
+            sleep 10  # Wait for a few seconds to allow the app to start
 
-       - name: Install dependencies
-         run: |
-           pip install -r requirements.txt
-       
-       - name: Deploy to Streamlit Cloud
-         run: streamlit run app.py
+        - name: Check if Streamlit app is running
+          run: |
+            if curl -s --head  --request GET http://localhost:8501 | grep "200 OK" > /dev/null; then 
+              echo "Streamlit app is running."
+            else
+              echo "Streamlit app is not running."
+              exit 1
+            fi
    ```
 
 ---
